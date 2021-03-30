@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="tailwind.css" />
+		<style>
+			@font-face {
+				font-family: "TT Norms";
+				src: url("assets/TT-Norms-Fonts/TTNorms-Regular.otf");
+				font-weight: normal;
+			}
+			@font-face {
+				font-family: "TT Norms";
+				src: url("assets/TT-Norms-Fonts/TTNorms-Bold.otf");
+				font-weight: bold;
+			}
+			p {
+				font-size: 1.25rem;
+				line-height: 1.65rem;
+			}
+			.content {
+				background-image: linear-gradient(
+					to bottom,
+					#ffd1e6,
+					#ffc6c7,
+					#ffe4cd
+				);
+			}
+			.grid-container {
+				margin: max(40px, 15%);
+                margin-bottom: 0;
+                max-width: 900px;
+			}
+            @media (min-width: 1024px) {
+                .heading-grid-big {
+                    display: grid;
+                    grid-template-columns: repeat(6, minmax(0, 150px));
+                    grid-template-rows: auto;
+                }
+			}
+			.reason > p {
+				max-width: 340px;
+			}
+			.how-it-works {
+				row-gap: 20px;
+			}
+		</style>
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="content flex justify-center">
+			<div class="grid-container grid-container-big">
+				<div
+					class="heading lg:col-start-1 lg:col-end-5 heading-grid-big relative"
+				>
+                    <div class="name row-start-1 col-start-1 col-span-3">
+                        <h1 class="text-8xl font-bold">ficha</h1>
+                        <p>меню в телефоні</p>
+                        <p class="pt-8">
+                            Більше не потрібно стояти в чергах чи очікувати на
+                            офіціанта.
+                        </p>
+                        <p class="pt-4">
+                            Меню у вигляді веб-додатку дозволить самостійно зробити
+                            замовлення та уникнути комунікації з офіціантом, що
+                            особливо актуально під час пандемії.
+                        </p>
+                    </div>
+					<div class="lg:col-start-5 lg:col-end-7 row-span-2">
+						<img
+							src="assets/phone.png"
+							alt="phone with app"
+							srcset=""
+						/>
+					</div>
+
+					<h2
+						class="lg:col-start-1 lg:col-end-5 font-bold text-4xl lg:absolute row-start-2 pt-10 lg:pt-24"
+					>
+						Як це працює?
+					</h2>
+				</div>
+				<div class="how-it-works grid grid-cols-2 pt-8 lg:grid-cols-6">
+					<img
+						src="assets/qr-scan.png"
+						alt="scanning qr-code"
+						class="m-auto"
+						style="max-width: 100px"
+					/>
+					<p class="my-auto">відкрийте веб-додаток</p>
+
+					<img
+						src="assets/to-do-list.png"
+						alt="choozing items"
+						class="m-auto"
+						style="max-width: 80px"
+					/>
+					<p class="my-auto">зробіть замовлення</p>
+
+					<img
+						src="assets/fast-food.png"
+						alt="food"
+						class="m-auto"
+						style="max-width: 90px"
+					/>
+					<p class="my-auto">смачного!</p>
+				</div>
+
+				<h2 class="pt-24 pb-6 font-bold text-4xl col-span-full">
+					Чому ficha?
+				</h2>
+				<div class="col-span-full grid md:grid-cols-2">
+					<div class="reason pt-8">
+						<p class="font-bold pb-3">Безпечно</p>
+						<p>
+							Уникнення непотрібних контактів сприяє зменшенню
+							ризиків для здоров’я
+						</p>
+					</div>
+					<div class="reason pt-8">
+						<p class="font-bold pb-3">PDF - не зручно</p>
+						<p>
+							Меню у форматі PDF це знущання над клієнтами. Довго
+							завантажується та не підходить для малих екранів
+						</p>
+					</div>
+					<div class="reason pt-8">
+						<p class="font-bold pb-3">Швидко</p>
+						<p>
+							Замість того щоб чекати офіціанта чи стояти в черзі
+							достатньо відкрити веб-додаток
+						</p>
+					</div>
+					<div class="reason pt-8">
+						<p class="font-bold pb-3">Ваш дизайн</p>
+						<p>
+							Персоналізуйте меню повністю під себе, дотримуйтесь
+							вашого бренду
+						</p>
+					</div>
+				</div>
+				<div class="flex justify-items-center">
+					<button
+						class="lg:col-start-3 lg:col-end-5 w-20 m-auto py-24"
+					>
+						<img src="assets/github.png" alt="" />
+					</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
